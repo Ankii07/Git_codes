@@ -1,0 +1,151 @@
+<!--ek jo website hoti hai uska pura project hum ek git ke andr manage krte hai
+alg alg version hoti hai usko manage krte hai aur usko jo main branch hota hai uska by default master naam hota hai
+usi code ka use krke hum apni website ko live krte hai -->
+
+<!-- humari website jo hoti hai uska main code master branch ke andr hota hai -->
+
+<!-- branch bnakr yh ho jata hai ki sari sari codes master branch ko us created branch mai aa jata hai 
+ aur nya code created branch mai likhte hai wh master branch mai reflect nhi hota jisse ki production ka code mai bhi koi change nhi aati-->
+
+ <!-- command to see the branches -->
+  <!-- git branch -->
+
+  <!-- command to create new branch -->
+   <!-- git branch branchname(about) -->
+
+<!--jb hum git branch krte hai to sari branches jo hoti hai wh dikhati hai 
+to jis branch mai currently work kr rhe hote hai wh star marked hoti hai aur green color se highlighted hoti hai -->
+
+<!-- command to enter in any branch -->
+ <!-- git checkout about(branch name/commit id) -->
+
+ <!-- jab aap git log krte ho to sirf usi branch ka dikhata hai jis branch mai aap ho dusre branch ka nhi dikhata hai -->
+
+ <!--agr hume sare commits dekhne hai hume sare repository ke andr-->
+ <!-- git log --all -->
+  <!--to make it sort of above command  -->
+  <!-- git log --all --oneline -->
+   <!-- HEAD reprsent krta hai ki hum kis branch ke andr hai -->
+
+<!-- jb ek branch se dusri branch create hoti hai uska matlb yh hota hai ki ek branch jisse dusri branch create hui hai 
+ us branch mai jitne sare commits hai wh sare saved ho jaye  aur jo nyi commits hai us branch mai wh bhi saved hoga-->
+
+ <!-- to see the branches and commits in it graphically-->
+  <!-- git log --all --oneline --graph -->
+
+  <!-- ctrl+shift+p se ek command palate khul jata hai vs code ka jisse bhut si cheeze ki ja skti hai -->
+
+  <!-- command to delete a branch aur jurrori hai ki delete krte waqt aap us branch mai na ho -->
+   <!-- git branch --delete contact -->
+
+<!-- kai bar aisa hota hai ki aap delete krne jate ho aur aap dusre branch mai bhi hote ho phir bhi delete nhi hoti kyuki
+ yh ho skta hai aapne khuch useful commits kr rakhi ho to iske liye git bash error dega, lekin aapko phir bhi krna hai to 
+ aap git branch -D (branch name ) se kr skte ho -->
+
+<!-- command to merge the branch aur merge us branch mai hogi jisme hum currently persent honge.. -->
+<!-- git merge contact(branch name) -->
+ <!-- jb bhi hum merge krte hai ek commit create hoti hai aur uski id hoti hai -->
+
+ <!-- master branch mai khuch commit nhi hota hai wha merge hi hota hai 
+  aur merge team ke lead krte hai team mates master branch se ek branch create krte hai usme sare apne code likhte hai
+  aur agr unka code pura successfully run kr jata hai wh pull request bhejte hai aur phir team lead code ko verify krke master branch mai merge krta hai -->
+
+  <!-- agr ek bar .git folder delete ho gyi to sare changes aur history delete ho jayegi 
+   isilye hum git hub use krte hai ki agr .git folder delete bhi ho jaye ya system corrupt bhi ho jaye pr wh sari files online pdi rhe..-->
+
+   <!-- agr aapko check krna hai ki aapki repository abhi online connected hai ki nhi git hub pe uske liye command hai -->
+    <!-- git remote show origin  -->
+
+<!-- to connect the repository to the github account -->
+<!-- git remote add origin https://github.com/Ankii07/Learnig_git.git -->
+
+<!-- to rename the current branch  -->
+<!-- git branch -M main -->
+
+<!-- to push the main branch in the git hub -->
+ <!-- git push -u(--set-upstream) orgin main -->
+  <!-- origin ka matlb hota hai ki hum remote branch pr bhejna chahte hai -->
+
+  <!-- to open vscode power shell -->
+   <!-- ctrl + shift + p -->
+
+
+<!--sync changes krke jo control panel mai aa rha hai uske aage ek number hai  -->
+<!-- yh yh bta rha hai ki jo changes localy ki hai wh remote yani git hub pe update nhi hui hai
+ update krni hai to git push command use krna hoga -->
+
+ <!-- to merge the branch -->
+<!-- git merge main -->
+
+<!-- bhut bari hume code ko pull bhi krna pad skta hai git repository se kyuki ek project pe bhut se bnde kam krte hai wh jab apni code push krte hai to 
+ wh github pe hi hota hai aur hume use use krne ke liye pull krna pdta hai jisse ki wh pari device mai aa jaye -->
+
+ <!-- steps to invite a contributor to your repository so that he can push codes to the repository -->
+<!-- go to setting in the git hub -->
+ <!-- ther you will see a option to add people click on that 
+  and write the account name of that person to whom you want to add on -->
+
+  <!-- to clone the repository  -->
+   <!-- git clone -->
+
+<!-- hum git hub pe bhi commits kr skte hai aur jo changes aur commit kiya hai usko apne device mai lane ke liye command hai -->
+<!-- git fetch -->
+ 
+ <!-- aur ek command hai jisse ki git fetch aur git merge ek sath ho jata hai -->
+  <!-- git pull -->
+
+<!-- git ka rule hota hai ki hume history rewrite krne se bachna chahiye -->
+ <!-- aise history jisko humne already push kr diya hai locally usko modify nhi krna chahiye to commit history mismatch ho jayegi  -->
+
+ <!-- history reset krne ke liye command hai pichle commit pe jane ke liye -->
+  <!-- reset se hum yh bolte hai ki seedha is id pe phuch jau is id pe humara jaisa code tha waisa kr do -->
+  <!-- git reset commit id -->
+   <!-- yhh teen trah se ho skti hai -->
+<!-- git reset --hard commit id -->
+<!-- git reset --soft commit id -->
+<!-- git reset --mixed commit id -->
+
+
+<!--humne jis id se reset kiya un id ko wapis dekhne ke liye commands hai  -->
+<!-- removed commit id dekhne liye -->
+<!-- git reflog -->
+
+<!-- git reflog se reseted id ke pta lg jayega us state(commit) pe wapis jane ke liye command waise hi hai jaise simpli krte hai -->
+ <!-- git reset commit id -->
+
+ <!-- head basically current working directory ko point krta hai -->
+
+ <!-- git checkout head~1 or git checkout head~4 krenge iska mtlb hai current jis head pe hai uske ek step piche -->
+
+ <!-- git reset --hard head~1-->
+
+ <!-- revert mai jiska krna hota hai uski commit id dalte hai balki
+  reset mai jis commit id pe jana hota hai us commit id ko likhte hai -->
+
+  <!-- revert krne pe ek nyi commit id generate hoti hai -->
+   <!-- us trah ki commit id hoti hai jis commit id ko likha tha uske andr jitne bhi changes huae the usko delete kr deta hai -->
+    <!-- git revert commit id -->
+
+    <!-- revert mai yh fayada hai ki ek nyi commit id bnakr wh state save kr leta hai jisme uske andr jo changes huae the wh nhi rhenge
+     jha ki reset maicommit id mai phle wale delete ho jate hai pr revert mai wh commit id hold krte hai -->
+
+<!--for reverting between ranges  -->
+<!-- git revert head~3..head -->
+
+<!-- git revert --no-commit head~3.. -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Git</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Learning Git</h1>
+    <h1>Hi bro watsup</h1>
+    <p>Hello Honey Boney</p>
+    <p>dfsafsda</p>
+</body>
+</html>

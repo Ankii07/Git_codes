@@ -1,0 +1,1 @@
+console.log('Jo Hoga manjoore Khuda hoga');
